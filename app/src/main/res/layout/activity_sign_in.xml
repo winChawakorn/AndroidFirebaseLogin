@@ -23,12 +23,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="152dp"
         android:layout_marginEnd="8dp"
+        android:onClick="logout"
         android:text="logout"
         android:textSize="20dp"
-        android:onClick="logout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user" />
+
+    <Button
+        android:id="@+id/newPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="64dp"
+        android:onClick="newPost"
+        android:text="New post"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user" />
+
+    <Button
+        android:id="@+id/viewPosts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="64dp"
+        android:onClick="viewPosts"
+        android:text="View posts"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/newPost"
         app:layout_constraintTop_toBottomOf="@+id/user" />
 </android.support.constraint.ConstraintLayout>

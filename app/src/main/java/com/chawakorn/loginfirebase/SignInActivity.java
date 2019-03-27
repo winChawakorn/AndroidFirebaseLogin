@@ -27,4 +27,12 @@ public class SignInActivity extends AppCompatActivity {
         finish();
         startActivity(new Intent(this, MainActivity.class));
     }
+
+    public void newPost(View view) {
+        startActivity(new Intent(this, NewPost.class));
+    }
+
+    public void viewPosts(View view) {
+        startActivity(new Intent(this, ViewPosts.class));
+    }
 }
