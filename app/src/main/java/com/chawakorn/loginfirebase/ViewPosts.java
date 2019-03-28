@@ -43,8 +43,6 @@ public class ViewPosts extends AppCompatActivity {
         mFirebaseAdapter = new FirebaseRecyclerAdapter<ViewSingleItem, ShowDataViewHolder>(ViewSingleItem.class, R.layout.viewsingleitem, ShowDataViewHolder.class, myRef) {
             @Override
             protected void populateViewHolder(final ShowDataViewHolder viewHolder, ViewSingleItem model, final int position) {
-                Log.d("aaa", "model.getImage_URL " + model.getImage_URL());
-                Log.d("aaa", "model.getImage_Title " + model.getImage_Title());
                 viewHolder.Image_URL(model.getImage_URL());
                 viewHolder.Image_Title(model.getImage_Title());
 

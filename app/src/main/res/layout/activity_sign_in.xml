@@ -7,7 +7,7 @@
     tools:context=".SignIn">
 
     <TextView
-        android:id="@+id/user"
+        android:id="@+id/info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="8dp"
         android:onClick="logout"
         android:text="logout"
@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user" />
+        app:layout_constraintTop_toBottomOf="@+id/location" />
 
     <Button
         android:id="@+id/newPost"
@@ -43,17 +43,31 @@
         android:text="New post"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user" />
+        app:layout_constraintTop_toBottomOf="@+id/info" />
 
     <Button
         android:id="@+id/viewPosts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
+        android:layout_marginStart="95dp"
         android:layout_marginTop="64dp"
         android:onClick="viewPosts"
         android:text="View posts"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/newPost"
-        app:layout_constraintTop_toBottomOf="@+id/user" />
+        app:layout_constraintTop_toBottomOf="@+id/info" />
+
+    <Button
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="165dp"
+        android:layout_marginEnd="8dp"
+        android:text="location service"
+        android:textSize="20sp"
+        android:onClick="location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info" />
 </android.support.constraint.ConstraintLayout>

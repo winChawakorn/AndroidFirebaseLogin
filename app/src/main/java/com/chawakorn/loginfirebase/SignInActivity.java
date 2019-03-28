@@ -5,21 +5,31 @@ import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SignInActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
-    TextView user;
+    TextView info;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
         mAuth = FirebaseAuth.getInstance();
-        user = findViewById(R.id.user);
-        user.setText("Welcome " + mAuth.getCurrentUser().getEmail());
+        info = findViewById(R.id.info);
+
+        if (mAuth.getCurrentUser() == null) {
+            finish();
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        }
+        FirebaseUser user = mAuth.getCurrentUser();
+        if(user != null) {
+            info.setText("Welcome " + user.getEmail());
+        }
     }
 
     public void logout(View view) {
@@ -34,5 +44,9 @@ public class SignInActivity extends AppCompatActivity {
 
     public void viewPosts(View view) {
         startActivity(new Intent(this, ViewPosts.class));
+    }
+
+    public void location(View view) {
+        startActivity(new Intent(getApplicationContext(), ViewLocation.class));
     }
 }

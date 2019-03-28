@@ -16,7 +16,7 @@ public class ViewSingleItem {
         return this.Image_URL;
     }
 
-    public void setiIage_URL(String Image_URL) {
+    public void setImage_URL(String Image_URL) {
         this.Image_URL = Image_URL;
     }
 
